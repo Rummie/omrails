@@ -1,0 +1,32 @@
+/*Delete this line if you don't want that font*/
+/*$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=oxygen);*/
+
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+
+$baseFontFamily: Noto Sans;
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+@import 'bootstrap';
+
+body {
+	padding-top: 60px;
+}
+
+@import 'bootstrap-responsive';
+
+
+/*This removes the color and shodow from the nav bar at the top*/ 
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a {
+		color: $gray;
+	}
+}
