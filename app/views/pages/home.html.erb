@@ -1,11 +1,15 @@
-<div class="hero-unit">
-	<h1>Welcome to One Month Train Station!</h1>
-	<p>
-		You've found the home page for the
-		<%= link_to "Schupid", "http://onemonthrails.com" %>
-		application.
-	</p>
-	<p>
-		<%= link_to "YOU'RE THE 1,000,000th VISITOR! CLICK HERE FOR A BILLION DOLLARS!", "#", class: "btn btn-success btn-large" %>
-	</p>
-</div>
+<% if user_signed_in? %>
+	<h1>You're Logged In! Boss!</h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to One Month Train Station!</h1>
+		<p>
+			You've found the home page for the
+			<%= link_to "Schupid", "http://onemonthrails.com" %>
+			application.
+		</p>
+		<p>
+			<%= link_to "YOU'RE THE 1,000,000th VISITOR! CLICK HERE FOR A BILLION DOLLARS!", new_user_registration_path, class: "btn btn-success btn-large" %>
+		</p>
+	</div>
+<% end %>
